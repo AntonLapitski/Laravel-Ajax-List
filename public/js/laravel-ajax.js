@@ -23,9 +23,9 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '#ajax-edit', function (e) {
-        var url = '/lists/' + $('#edit-identifier').attr('value');
+        let url = '/lists/' + $('#edit-identifier').attr('value');
         e.preventDefault();
-        jQuery.ajax({
+        $.ajax({
             url: url,
             method: 'PUT',
             data: {
@@ -34,7 +34,6 @@ $(document).ready(function () {
                 body: $('#editBody').val()
             },
             success: function (result) {
-                console.log(url);
                 $('#editModal').modal('hide');
                 $('#mytable').load('/lists #mytable');
             }
@@ -44,7 +43,7 @@ $(document).ready(function () {
     $(document).on('click', '.btn', function () {
         if (this.id === 'view' + this.value) {
             let url = 'lists/' + this.value;
-            jQuery.ajax({
+            $.ajax({
                 url: url,
                 method: 'GET',
                 dataType: 'json',
@@ -63,7 +62,7 @@ $(document).ready(function () {
         if (this.id === 'edit' + this.value) {
             let url = 'lists/' + this.value + '/edit';
             let id = this.value;
-            jQuery.ajax({
+            $.ajax({
                 url: url,
                 method: 'GET',
                 dataType: 'json',
@@ -82,7 +81,7 @@ $(document).ready(function () {
     $(document).on('click', '.btn', function () {
         if (this.id === 'delete' + this.value) {
             let url = 'lists/' + this.value;
-            jQuery.ajax({
+            $.ajax({
                 url: url,
                 type: 'POST',
                 data: {
