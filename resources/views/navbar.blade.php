@@ -21,7 +21,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right" style="background: #fff;">
-                <li><a href="" target="_blank">@lang('all.fork')</a></li>
+                <li><a href="https://github.com/AntonLapitski/Laravel-Ajax-List" target="_blank">@lang('all.fork')</a></li>
             </ul>
         </div>
     </div>
