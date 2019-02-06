@@ -48,7 +48,6 @@ $(document).ready(function () {
                 method: 'GET',
                 dataType: 'json',
                 success: function (data) {
-                    console.log(data);
                     let title = data['title'];
                     let body = data['body'];
                     $('#taskName').text(title);
