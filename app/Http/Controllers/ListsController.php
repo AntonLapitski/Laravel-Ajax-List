@@ -15,6 +15,7 @@ class ListsController extends Controller
     public function index()
     {
         $tasks = Task::all();
+
         return view('lists.index', ['tasks' => $tasks]);
     }
 
